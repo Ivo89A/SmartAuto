@@ -1,0 +1,263 @@
+@import url('https://cdn.jsdeliver.net/npm/@n8n/chat/dist/style.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    /*Colores de n8n*/
+    --chat--color-primary:rgba(39, 111, 227, 0.74);/*Color circulo pequeño*/
+    --chat--color-primary-shade-50:rgba(79, 129, 208, 0.74);/*Color Hover*/
+    --chat--color-primary-shade-100:#8DAA65;/*Color hover click*/
+
+    --chat--color-dark:rgba(0, 15, 164, 0.74);/*Color encabezado y texto*/
+    --chat--color-light:#F2F2F2;/*Color background chat*/
+
+    --chat--message--bot--background:rgba(0, 14, 71, 0.12);/*Color backgroud texto bot*/
+    --chat--message--bot--color:#000000;/*Color texto bot*/
+
+    --chat--message--user--background:rgba(0, 14, 71, 0.12);/*Color backgroud texto user*/
+    --chat--message--user--color:#ffffff;/*Color texto user*/
+
+    --chat--color-secondary:#d4edda;/*Color boton enviar*/
+    --chat--color--white:#F2F2F2;/*Color chat pequeño*/
+
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(90deg, #005f73, #0a9396);
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    cursor: default;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 2rem;
+  }
+  nav ul li a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #94d2bd;
+  }
+  main {
+    padding-top: 90px; /* header fixed height */
+  }
+  .hero {
+    background: linear-gradient(135deg, #94d2bd, #005f73);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+  }
+  .btn-primary {
+    background-color: #ee9b00;
+    color: #fff;
+    padding: 0.85rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 6px 12px rgba(238,155,0,0.6);
+    transition: background-color 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: #ca7c00;
+  }
+  section {
+    padding: 4rem 2rem;
+  }
+  .container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #005f73;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+  }
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+  }
+  .service-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  .service-card:hover {
+    transform: translateY(-8px);
+  }
+  .service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ee9b00;
+  }
+  .service-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #0a9396;
+  }
+  .service-desc {
+    font-size: 1rem;
+    color: #555;
+  }
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .benefit-item {
+    background: #e0fbfc;
+    flex: 1 1 250px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .benefit-icon {
+    font-size: 2.5rem;
+    color: #005f73;
+  }
+  .benefit-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0a9396;
+  }
+  .contact-form {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #005f73;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #94d2bd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #ee9b00;
+    outline: none;
+  }
+  .contact-form button {
+    width: 100%;
+    background-color: #0a9396;
+    color: white;
+    font-weight: 700;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(10,147,150,0.7);
+    transition: background-color 0.3s ease;
+  }
+  .contact-form button:hover {
+    background-color: #087a7c;
+  }
+  footer {
+    background: #001219;
+    color: #94d2bd;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ee9b00;
+    margin: 0 0.5rem;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav ul {
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin-left: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    .benefits-list {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }

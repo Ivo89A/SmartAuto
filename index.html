@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.js" />
+
+<title>Servicios de Automatización | Tu Empresa</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">SmartAuto</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio" aria-label="Bienvenida">
+    <h1>Automatiza tu negocio hoy</h1>
+    <p>Impulsa tu productividad con nuestras soluciones de automatización personalizadas y eficientes.</p>
+    <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'});">Solicita una consulta</button>
+  </section>
+  <section id="servicios" aria-label="Servicios" >
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="services-list">
+      <article class="service-card" tabindex="0" aria-describedby="serv1-desc">
+        <div class="service-icon" aria-hidden="true">🤖</div>
+        <h3 class="service-title">Automatización de Procesos</h3>
+        <p class="service-desc" id="serv1-desc">Optimización de tareas repetitivas mediante flujos automatizados que ahorran tiempo y recursos.</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-describedby="serv2-desc">
+        <div class="service-icon" aria-hidden="true">📊</div>
+        <h3 class="service-title">Análisis y Reportes</h3>
+        <p class="service-desc" id="serv2-desc">Generación automática de informes detallados para una mejor toma de decisiones.</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-describedby="serv3-desc">
+        <div class="service-icon" aria-hidden="true">🌐</div>
+        <h3 class="service-title">Integración de Sistemas</h3>
+        <p class="service-desc" id="serv3-desc">Conectamos distintas plataformas y herramientas para que trabajen de forma sincronizada.</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-describedby="serv4-desc">
+        <div class="service-icon" aria-hidden="true">⚙️</div>
+        <h3 class="service-title">Automatización Personalizada</h3>
+        <p class="service-desc" id="serv4-desc">Soluciones hechas a medida para cubrir las necesidades específicas de tu empresa.</p>
+      </article>
+    </div>
+  </section>
+  <section id="beneficios" aria-label="Beneficios">
+    <h2 class="section-title">¿Por qué elegirnos?</h2>
+    <div class="benefits-list">
+      <div class="benefit-item" tabindex="0">
+        <div class="benefit-icon" aria-hidden="true">⏱️</div>
+        <p class="benefit-text">Ahorra tiempo valioso automatizando tareas manuales.</p>
+      </div>
+      <div class="benefit-item" tabindex="0">
+        <div class="benefit-icon" aria-hidden="true">💼</div>
+        <p class="benefit-text">Profesionales capacitados con experiencia comprobada.</p>
+      </div>
+      <div class="benefit-item" tabindex="0">
+        <div class="benefit-icon" aria-hidden="true">📈</div>
+        <p class="benefit-text">Incrementa la eficiencia y productividad de tu equipo.</p>
+      </div>
+      <div class="benefit-item" tabindex="0">
+        <div class="benefit-icon" aria-hidden="true">🔒</div>
+        <p class="benefit-text">Seguridad y confidencialidad en cada proyecto.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contacto" aria-label="Formulario de contacto">
+    <h2 class="section-title">Contáctanos</h2>
+    <form class="contact-form" onsubmit="enviarFormulario(event)" novalidate>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Tu nombre" />
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required aria-required="true" placeholder="ejemplo@correo.com" />
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+	webhookUrl: 'https://n8n-production-5982.up.railway.app/webhook/d976c7ef-2b90-4256-9785-74486430ef2a/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Mucho gusto! 👋',
+		'Mi nombre es AutoBot, en que te puedo ayudar hoy?'
+	],
+	i18n: {
+		en: {
+			title: 'Este es nuestro chat en vivo! 👋',
+			subtitle: "Comienza a escribirnos, con atencion 24/7.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+});
+</script>
+<footer>
+  <p>© 2024 AutoMatiK. Todos los derechos reservados.</p>
+  <p>
+    Síguenos en
+    <a href="#" aria-label="Facebook" title="Facebook">Facebook</a> |
+    <a href="#" aria-label="Twitter" title="Twitter">Twitter</a> |
+    <a href="#" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a>
+  </p>
+</footer>
+</body>
+</html>
+
