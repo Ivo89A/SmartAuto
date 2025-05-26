@@ -24,8 +24,9 @@ Este proyecto es una página web desarrollada en HTML/CSS/JS diseñada para ofre
 
 ## 📸 Vista previa
 
-![Vista de la pagina]("C:\Users\ivoal\OneDrive\Documentos\n8n\pagina_automatizaciones\imagenes\paginacontacto.png")
-![Vista de el contacto]("C:\Users\ivoal\OneDrive\Documentos\n8n\pagina_automatizaciones\imagenes\paginacontacto.png")
+![Vista de la página](./imagenes/vistapagina.png)
+![Vista del contacto](./imagenes/paginacontacto.png)
+
 
 ---
 ## 📈 Futuras mejoras
