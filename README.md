@@ -17,7 +17,6 @@ Este proyecto es una página web desarrollada en HTML/CSS/JS diseñada para ofre
 
 - Automatización de procesos administrativos.
 - Sincronización de agendas y tareas.
-- Integración de sistemas internos (ERP, CRM, etc.).
 - Mejora del flujo de trabajo para equipos comerciales o técnicos.
 
 ---
