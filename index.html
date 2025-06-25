@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Servicios de Automatización | SmartAuto</title>
     
@@ -90,33 +90,32 @@
   </section>
 </main>
 <script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
   createChat({
-	webhookUrl: 'https://n8n-production-5982.up.railway.app/webhook/0959f20e-2a5a-466a-8f95-b603a58d23d0/chat',
-	webhookConfig: {
-		method: 'POST',
-		headers: {}
-	},
-	target: '#n8n-chat',
-	mode: 'window',
-	chatInputKey: 'chatInput',
-	chatSessionKey: 'sessionId',
-	metadata: {},
-	showWelcomeScreen: false,
-	defaultLanguage: 'en',
-	initialMessages: [
-		'Mucho gusto! 👋',
-		'Mi nombre es AutoBot, en que te puedo ayudar hoy?'
-	],
-	i18n: {
-		en: {
-			title: 'Este es nuestro chat en vivo! 👋',
-			subtitle: "Comienza a escribirnos, con atencion 24/7.",
-			footer: '',
-			getStarted: 'New Conversation',
-			inputPlaceholder: 'Type your question..',
-		},
-	},
-});
+    webhookUrl: 'https://n8n-production-5982.up.railway.app/webhook/0959f20e-2a5a-466a-8f95-b603a58d23d0/chat',
+    webhookConfig: { method: 'POST', headers: {} },
+    target: '#n8n-chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    metadata: {},
+    showWelcomeScreen: false,
+    defaultLanguage: 'en',
+    initialMessages: [
+      'Mucho gusto! 👋',
+      'Mi nombre es AutoBot, ¿en qué te puedo ayudar hoy?'
+    ],
+    i18n: {
+      en: {
+        title: 'Este es nuestro chat en vivo! 👋',
+        subtitle: "Comienza a escribirnos, con atención 24/7.",
+        footer: '',
+        getStarted: 'Nueva conversación',
+        inputPlaceholder: 'Escribe tu pregunta...',
+      },
+    },
+  });
 </script>
 <footer>
   <p>© 2024 AutoMatiK. Todos los derechos reservados.</p>
