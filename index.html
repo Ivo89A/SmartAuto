@@ -78,7 +78,7 @@
   <section id="contacto" aria-label="Formulario de contacto">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <h2 class="section-title">Contáctanos</h2>
-    <form class="contact-form" onsubmit="enviarFormulario(event)">
+    <form class="contact-form" onsubmit="enviarFormulario(event)" action="https://n8n-production-5982.up.railway.app/webhook/lead-lost-webhook">
       <label for="nombre">Nombre</label>
       <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Tu nombre" />
       <label for="email">Correo electrónico</label>
