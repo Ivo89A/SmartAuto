@@ -88,6 +88,15 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+
+     <!-- Nueva sección para CRUD: Panel de Leads -->
+      <section id="leads" class="admin-panel" style="display: none;" aria-label="Panel de Administración de Leads">
+        <h2 class="section-title">Panel de Leads</h2>
+        <div class="container">
+          <button class="btn-primary" onclick="cargarLeads()">Cargar Leads</button>
+          <div id="leads-table" class="leads-table"></div>
+        </div>
+      </section>
 </main>
 <script type="module">
   import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';

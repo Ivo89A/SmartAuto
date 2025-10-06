@@ -261,3 +261,26 @@
       gap: 1rem;
     }
   }
+
+  /* Estilos para el Panel de Leads */
+.admin-panel {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+.leads-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+
+.leads-table th,
+.leads-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
