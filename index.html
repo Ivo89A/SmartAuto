@@ -78,7 +78,7 @@
   <section id="contacto" aria-label="Formulario de contacto">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <h2 class="section-title">Contáctanos</h2>
-    <form class="contact-form" method="POST" onsubmit="enviarFormulario(event)" netlify action="https://n8n-production-5982.up.railway.app/webhook/lead-lost-webhook">
+    <form class="contact-form" method="POST" onsubmit="enviarFormulario(event)" netlify action="https://osvaldo.n8n.metodovidroop.com/webhook/f078cda0-5e14-4bc0-ae0b-a0a243b4ed2e">
       <label for="nombre">Nombre</label>
       <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Tu nombre" />
       <label for="email">Correo electrónico</label>
@@ -102,7 +102,7 @@
   import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
   createChat({
-    webhookUrl: 'https://n8n-production-5982.up.railway.app/webhook/0959f20e-2a5a-466a-8f95-b603a58d23d0/chat',
+    webhookUrl: 'https://osvaldo.n8n.metodovidroop.com/webhook/7495f72d-4aeb-4ac5-b94d-ebfff19143b3/chat',
     webhookConfig: { method: 'POST', headers: {} },
     target: '#n8n-chat',
     mode: 'window',
