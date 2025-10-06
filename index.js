@@ -29,7 +29,7 @@ async function enviarFormulario(event) {
 
   try {
     // 1. Envío al webhook de n8n (sin cambios)
-    const webhookRes = await fetch('https://n8n-production-5982.up.railway.app/webhook/lead-lost-webhook', {
+    const webhookRes = await fetch('https://osvaldo.n8n.metodovidroop.com/webhook/12a7a445-7f1e-48e4-b32b-77236556ff45', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nombre, email, mensaje })  // Corregido de 'correo'
