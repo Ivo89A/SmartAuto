@@ -55,6 +55,38 @@ async function enviarFormulario(event) {
   }
 }
 
+
+function emailJs() {
+  const formEl = document.querySelector('.contact-form');
+  
+  formEl.addEventListener('submit', function (event) {
+    event.preventDefault();
+  });
+
+  const request = {
+    nombre: document.getElementById('nombre').value,
+    email: document.getElementById('email').value,
+    mensaje: document.getElementById('mensaje').value,
+  };
+
+  var serviceID = 'service_06fkpxv';
+  var templateID = 'template_g3oj3vg';
+
+  try {
+    emailjs.send(serviceID, templateID, request)
+      .then(() => {
+        console.log('Gracias por contactarnos!');
+      }, (err) => {
+        console.log('FAILED...', err);
+      });
+  } catch (error) {
+    console.error('Error al enviar el correo:', error);
+  }
+
+}
+emailJs();
+
+
 // Cargar y mostrar todos los leads en una tabla
 async function cargarLeads() {
   try {
