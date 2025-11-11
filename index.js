@@ -15,7 +15,7 @@ function toggleLeadsPanel() {
 }
 
 // Create + Webhook: Envía al webhook de n8n Y a Supabase
-async function enviarFormulario(event) {
+/**async function enviarFormulario(event) {
   event.preventDefault();
 
   const nombre = document.getElementById('nombre').value.trim();
@@ -53,7 +53,7 @@ async function enviarFormulario(event) {
     console.error(error);
     alert('Error al enviar. Intenta más tarde.');
   }
-}
+}**/
 
 
 function emailJs() {
