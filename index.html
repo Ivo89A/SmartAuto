@@ -10,6 +10,7 @@
     <script defer src="./index.js">
       type="text/javascript"
       src="https://cdn.jsdeliver.net/npm/@emailjs/browser@4/dist/email.min.js"
+      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="PcUNmcHIVUzUx_au3eBSh";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
   </head>
   <body>
@@ -101,34 +102,6 @@
         </div>
       </section>
 </main>
-<script type="module">
-  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-  createChat({
-    webhookUrl: 'https://osvaldo.n8n.metodovidroop.com/webhook/7495f72d-4aeb-4ac5-b94d-ebfff19143b3/chat',
-    webhookConfig: { method: 'POST', headers: {} },
-    target: '#n8n-chat',
-    mode: 'window',
-    chatInputKey: 'chatInput',
-    chatSessionKey: 'sessionId',
-    metadata: {},
-    showWelcomeScreen: false,
-    defaultLanguage: 'en',
-    initialMessages: [
-      'Mucho gusto! 👋',
-      'Mi nombre es AutoBot, ¿en qué te puedo ayudar hoy?'
-    ],
-    i18n: {
-      en: {
-        title: 'Este es nuestro chat en vivo! 👋',
-        subtitle: "Comienza a escribirnos, con atención 24/7.",
-        footer: '',
-        getStarted: 'Nueva conversación',
-        inputPlaceholder: 'Escribe tu pregunta...',
-      },
-    },
-  });
-</script>
 <footer>
   <p>© 2024 AutoMatiK. Todos los derechos reservados.</p>
   <p>
